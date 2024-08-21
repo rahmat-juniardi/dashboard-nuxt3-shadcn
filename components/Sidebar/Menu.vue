@@ -2,7 +2,7 @@
 const items = ref([
     {
         title: "Overview",
-        path: "/overview",
+        path: "/",
         icon: "ri:dashboard-line",
     },
     {
@@ -32,17 +32,18 @@ const items = ref([
     <div>
         <header class="flex items-center gap-2 p-4 hover:scale-[101%] transition cursor-pointer">
             <Logo />
-            <p class="font-bold">Nuxt Company</p>
+            <p class="text-black font-bold">Nuxt Company</p>
         </header>
         <div class="px-4 grow">
             <div class="grid gap-4">
-                <div 
+                <NuxtLink 
                     v-for="(item, idx) in items" :key="idx" 
-                    class="flex items-center gap-2 px-2 py-1 transition rounded cursor-pointer hover:bg-neutral-100 "
+                    :href="item.path"
+                    class="flex items-center gap-2 px-2 py-1 transition rounded cursor-pointer hover:bg-neutral-100 "                    
                 >
                     <Icon size="20" :name="item.icon" color="black"/>
                     <span>{{ item.title }}</span>
-                </div>
+                </NuxtLink>
             </div>
         </div>
     </div>
