@@ -63,7 +63,7 @@
             amount: 84.44,
             label: "View refunds",
             description: "Refunds since beginning of year",
-            icon: "heroicons-outline:reciept-refund",
+            icon: "heroicons:receipt-refund",
         },
         {
             title: "Payout",
@@ -92,12 +92,6 @@
             <div class="w-[120px] h-[36px] bg-neutral-200"></div>
         </header>
         <main class="grid gap-4">
-            <!-- <div class="flex items-center gap-4">
-                <div v-for="(item, idx) in 3" :key="idx" class="w-[120px] h-[36px] bg-neutral-200"></div>
-            </div>            
-            <section>
-                <div class="w-full h-[360px] bg-neutral-200"></div>
-            </section> -->
             <Tabs defaultValue="Today">
                 <TabsList  className="max-w-[400px]">
                     <TabsTrigger v-for="(item, idx) in list" :key="idx" :value="item.title" @click="setCategory">
@@ -110,8 +104,8 @@
             </Tabs>
         </main>
         <footer>
-           <div class="flex items-center gap-4">
-                <div v-for="(item, idx) in 3" :key="idx" class="w-full h-[260px] bg-neutral-200"></div>
+           <div class="grid gap-4 lg:grid-cols-3">                
+                <Card v-for="(item, idx) in cards" :key="idx" :card="item"></Card>
            </div>
         </footer>
     </div>
