@@ -26,10 +26,10 @@ const open = ref(true)
         </div>
 
         <!-- Desktop Sidebar -->
-        <div class="hidden lg:flex w-[250px] h-screen flex flex-col justify-between border-r">
+        <div class="hidden lg:flex w-[250px] h-full h-screen flex flex-col justify-between border-r">
             <SidebarMenu />
             <div>
-                UserItem
+                <UserItem />
             </div>
         </div>
     </div>
