@@ -89,7 +89,8 @@
                 <p>Hi, Welcome back Rahmat !</p>
                 <h1>Dashboard</h1>
             </div>
-            <div class="w-[120px] h-[36px] bg-neutral-200"></div>
+            <!-- <div class="w-[120px] h-[36px] bg-neutral-200"></div> -->
+             <ProductNew />
         </header>
         <main class="grid gap-4">
             <Tabs defaultValue="Today">
